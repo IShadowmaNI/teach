@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>my awesome title</title>
+</head>
+<body>
+some random text
+<p th:text="${myRandomNumber}"></p>
+<table>
+    <tbody>
+        <tr th:each="valueItem : ${values}">
+            <td th:text="${valueItem.value}"></td>
+        </tr>
+    </tbody>
+</table>
+
+    <form action="#" th:action="@{/simpleAdd}" th:object="${mathDTO}" method="post">
+        <input type="text" th:field="*{value1}" />
+        <input type="text" th:field="*{value2}" />
+        <input type="submit" />
+    </form>
+
+</body>
+</html>
