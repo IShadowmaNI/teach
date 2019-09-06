@@ -15,10 +15,12 @@ some random text
     </tbody>
 </table>
 
-    <form action="#" th:action="@{/simpleAdd}" th:object="${mathDTO}" method="post">
+    <form action="#" th:action="@{/action}" th:object="${mathDTO}" method="post">
         <input type="text" th:field="*{value1}" />
-        <input type="text" th:field="*{value2}" />
-        <input type="submit" />
+        <input type="text" th:field="*{value2}" /> <br> <br>
+        <input type="submit" name="action" value="simpleAdd"/>
+        <input type="submit" name="action" value="simpleReduction"/>
+        <input type="submit" name="action" value="pow2o3"/>
     </form>
 
 </body>
